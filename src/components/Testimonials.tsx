@@ -31,13 +31,7 @@ const Testimonials = () => {
     },
   ];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
-
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
+  // Auto-scroll removed to reduce anxiety-inducing animations
 
   const stats = [
     { icon: TrendingUp, label: "+1.2 grades avg", color: "text-primary" },

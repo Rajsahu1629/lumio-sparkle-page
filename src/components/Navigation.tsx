@@ -1,6 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -42,12 +43,12 @@ const Navigation = () => {
             >
               Pricing
             </button>
-            <button
-              onClick={() => scrollToSection("footer")}
+            <Link
+              to="/teacher-dashboard"
               className="text-foreground hover:text-primary transition-colors"
             >
               For Teachers
-            </button>
+            </Link>
           </div>
 
           {/* Desktop CTA Buttons */}
@@ -55,7 +56,10 @@ const Navigation = () => {
             <button className="text-foreground hover:text-primary transition-colors">
               Login
             </button>
-            <Button variant="hero" onClick={() => scrollToSection("demo-form")}>
+            <Button 
+              className="bg-accent text-accent-foreground hover:bg-accent/90"
+              onClick={() => scrollToSection("demo-form")}
+            >
               Book Free Demo
             </Button>
           </div>
@@ -91,19 +95,19 @@ const Navigation = () => {
             >
               Pricing
             </button>
-            <button
-              onClick={() => scrollToSection("footer")}
+            <Link
+              to="/teacher-dashboard"
               className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors"
+              onClick={() => setIsOpen(false)}
             >
               For Teachers
-            </button>
+            </Link>
             <hr className="border-border" />
             <button className="block w-full text-left py-2 text-foreground hover:text-primary transition-colors">
               Login
             </button>
             <Button
-              variant="hero"
-              className="w-full"
+              className="w-full bg-accent text-accent-foreground hover:bg-accent/90"
               onClick={() => scrollToSection("demo-form")}
             >
               Book Free Demo

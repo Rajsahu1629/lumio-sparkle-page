@@ -51,7 +51,11 @@ const Hero = () => {
             </h2>
 
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button variant="hero" size="xl" onClick={scrollToDemo}>
+              <Button 
+                size="xl"
+                className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 hover:shadow-xl font-bold"
+                onClick={scrollToDemo}
+              >
                 Book Free Demo
               </Button>
               <Button variant="outline" size="xl" onClick={scrollToPricing}>
@@ -98,8 +102,7 @@ const Hero = () => {
               {tutors.map((tutor, index) => (
                 <div
                   key={tutor.name}
-                  className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 animate-float"
-                  style={{ animationDelay: `${index * 0.5}s` }}
+                  className="bg-card p-6 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300"
                 >
                   <div className="flex items-center gap-4">
                     <div className="w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl font-bold text-white">
